@@ -27,6 +27,25 @@ def most_and_least_common_type(treats):
     """Given list of treats, return most and least common treat types.
 
     Return most and least common treat types in tuple of format (most, least).
+
+    For example:
+
+    >>> most_and_least_common_type([])
+    (None, None)
+
+    >>> most_and_least_common_type([{'type': 'drink'}, {'type': 'drink'}, {'type': 'appetizer'}, {'type': 'appetizer'}, {'type': 'appetizer'}, {'type': 'drink'}])
+    ('drink', 'drink') 
+
+    >>> most_and_least_common_type([
+    ...                            {'type': 'dessert'},
+    ...                            {'type': 'dessert'},
+    ...                            {'type': 'appetizer'},
+    ...                            {'type': 'dessert'},
+    ...                            {'type': 'appetizer'},
+    ...                            {'type': 'drink'},
+    ...                            ])
+    ('dessert', 'drink')
+
     """
 
     types = {}
@@ -51,10 +70,12 @@ def most_and_least_common_type(treats):
     return (most_type, least_type)
 
 
+
 def get_treats():
     """Return treats being brought to the party.
 
     One day, I'll move this into a database! -- Balloonicorn
+
     """
 
     return [
